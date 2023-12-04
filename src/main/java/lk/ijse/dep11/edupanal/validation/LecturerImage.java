@@ -13,9 +13,9 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface LecturerImage {
 
-    long maximumFileSize() default ( 500 * 1024);
+    long maximumFileSize() default (500 * 1024);
 
-    String message() default "Invalid image or file size exceeds more than {maximumFileSize}"; // "{maximumFileSize}" we can add here to get values from methods like java expression
+    String message() default "Invalid image or file size exceeds more than {maximumFileSize}kb"; // "{maximumFileSize}" we can add here to get values from methods like java expression
 
     Class<?>[] groups() default {};
 

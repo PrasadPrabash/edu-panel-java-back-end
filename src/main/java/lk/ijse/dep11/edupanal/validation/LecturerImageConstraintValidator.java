@@ -15,7 +15,8 @@ public class LecturerImageConstraintValidator implements ConstraintValidator<Lec
 
     @Override
     public boolean isValid(MultipartFile multipartFile, ConstraintValidatorContext constraintValidatorContext) {
-        // validator class object is
+        // validator class object in here. validator logic part
+        if(multipartFile == null || multipartFile.isEmpty() ) return true;
         if(multipartFile.getSize() > maximumFileSize) return false;
         if(multipartFile.getContentType() == null) return false;
         if(!multipartFile.getContentType().startsWith("image/")) return false;

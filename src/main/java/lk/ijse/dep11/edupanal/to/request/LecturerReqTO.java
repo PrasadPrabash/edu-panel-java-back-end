@@ -15,7 +15,7 @@ import javax.validation.constraints.Pattern;
 
 public class LecturerReqTO {
    @NotBlank(message = "Name can't be empty")
-   @Pattern(regexp = "^[A-Za-z ]+$", message = "Invalid name")
+   @Pattern(regexp = "^[A-Za-z ]+$", message = "Invalid name: {value}")
    private String name;
    @NotBlank(message = "Designation can't be empty")
    @Length(min = 2, message = "Invalid designation")
